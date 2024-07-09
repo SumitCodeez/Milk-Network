@@ -146,7 +146,11 @@ function loaderAnimation() {
       clutter += `<span>${e}</span>`;
     });
     elem.innerHTML = clutter;
-    elem.style.transformOrigin = "bottom left";
+    if (window.innerWidth <= 600) {
+      elem.style.transformOrigin = "0% 450%";
+    } else {
+      elem.style.transformOrigin = "bottom left";
+    }
   });
   var tl3 = gsap.timeline();
   tl3.from(".loader h1 span", {
@@ -214,7 +218,7 @@ function imgGrow() {
 }
 function imgCursor() {
   var imgSections = document.querySelectorAll("#page-4 .img-section");
-  var cursor = document.querySelector("#page-4 .cursor-btn"); 
+  var cursor = document.querySelector("#page-4 .cursor-btn");
 
   imgSections.forEach(function (boxContainer) {
     function updateCursorPosition(det) {
