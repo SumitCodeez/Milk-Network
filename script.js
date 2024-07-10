@@ -202,15 +202,25 @@ function navAnim() {
   });
 }
 function imgGrow() {
+  const screenWidth = window.innerWidth;
+  let startValue = "110% 50%";
+  let endValue = "240% 50%";
+
+  if (screenWidth <= 600) {
+    startValue = "70% 50%";
+    endValue = "200% 50%";
+  }
+
   var tl4 = gsap.timeline({
     scrollTrigger: {
       trigger: "#page-3",
       scroller: "#main",
-      start: "110% 50%",
-      end: "240% 50%",
+      start: startValue,
+      end: endValue,
       scrub: true,
     },
   });
+
   tl4.to(".img-part img", {
     width: "100%",
     stagger: 0.2,
