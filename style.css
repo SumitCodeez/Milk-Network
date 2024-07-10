@@ -1,8 +1,12 @@
+@font-face {
+  font-family: Basic;
+  src: url(./assets/fonts/font.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "NBInternationalPro-Reg";
+  font-family: Basic;
 }
 html,
 body {
@@ -454,7 +458,7 @@ body {
   display: inline-block;
   padding-bottom: 0.3vw;
 }
-#read-section .read .lower-res{
+#read-section .read .lower-res {
   display: none;
 }
 #read-section {
@@ -1037,6 +1041,9 @@ body {
   width: 22px;
 }
 @media screen and (max-width: 600px) {
+  .loader {
+    display: none;
+  }
   .loader h1 {
     color: #000;
     font-size: 28vw;
@@ -1280,7 +1287,7 @@ body {
     gap: 1vw;
     padding: 0vw 1vw;
   }
-  #read-section .read .lower{
+  #read-section .read .lower {
     display: none;
   }
   #read-section .read .lower-res {
@@ -1351,33 +1358,212 @@ body {
     object-fit: cover;
     border-radius: 15px;
   }
-  #page-4 .up {
-    flex-direction: column;
-    align-items: center;
-  }
-  #page-4 .up .dot {
-    width: 4vw;
-    height: 4vw;
-  }
-  #page-4 .up h1 {
-    font-size: 6vw;
-  }
-  #page-4 .down .left-4,
-  #page-4 .down .right-4 {
+  #page-4 {
     width: 100%;
+    min-height: 100vh;
   }
-  #page-4 .down .left-4 p {
-    font-size: 4vw;
+  #page-4 .top-part {
+    width: 100%;
+    height: 30vh;
+    display: flex;
   }
-  #page-4 .down .left-4 h2 {
-    font-size: 6vw;
+  #page-4 .top-part .top-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    gap: 0.5vw;
+    padding: 1vw;
   }
-  #page-4 .down .right-4 .circle {
-    width: 6vw;
-    height: 6vw;
+  #page-4 .top-part .top-left .dot-3 {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    background-color: #000;
+    padding-top: 0.7vw;
   }
-  #page-4 .down .right-4 .circle h2 {
-    font-size: 2.5vw;
+  #page-4 .top-part .top-left h2 {
+    font-weight: 500;
+    font-size: 1vw;
+  }
+  #page-4 .top-part .top-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw;
+  }
+  #page-4 .top-part .top-right p {
+    font-size: 1.8vw;
+    width: 40%;
+  }
+  #page-4 .top-part .top-right .rightest {
+    display: flex;
+  }
+  #page-4 .top-part .top-right .rightest .dash {
+    width: 1.2vw;
+    height: 0.5vh;
+    background-color: #000;
+    margin: 1.3vw 0vw;
+  }
+  #page-4 .cursor-btn {
+    height: 4vw;
+    width: 4vw;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(64, 63, 63);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #page-4 .cursor-btn i {
+    font-size: 1.5vw;
+    color: #fff;
+    font-weight: 500;
+  }
+  #page-4 .img-section {
+    width: 100%;
+    height: 82vh;
+    display: flex;
+  }
+  #page-4 .img-section .img-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    gap: 0.5vw;
+  }
+  #page-4 .img-section .img-left .up-img {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+  }
+  #page-4 .img-section .img-left .up-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+  }
+  #page-4 .img-section .img-left .up-img:hover img {
+    transform: scale(1.1);
+  }
+  #page-4 .img-section .img-left .low-text h2 {
+    font-size: 1vw;
+    font-weight: 400;
+    padding-left: 0.3vw;
+  }
+  #page-4 .img-section .img-left .low-text .animation {
+    display: inline-block;
+  }
+  #page-4 .img-section .img-left .low-text .animation .underline {
+    width: 100%;
+    height: 0.2vh;
+    background-color: #000;
+    transform-origin: left;
+    transform: scaleX(0);
+    margin-left: 0.3vw;
+  }
+  #page-4 .img-section .img-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    gap: 0.5vw;
+  }
+  #page-4 .img-section .img-right .up-img {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+  }
+  #page-4 .img-section .img-right .up-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+  }
+  #page-4 .img-section .img-right .up-img:hover img {
+    transform: scale(1.1);
+  }
+  #page-4 .img-section .img-right .low-text h2 {
+    font-size: 1vw;
+    font-weight: 400;
+    padding-left: 0.3vw;
+  }
+  #page-4 .img-section .img-right .low-text .animation {
+    display: inline-block;
+  }
+  #page-4 .img-section .img-right .low-text .animation .underline {
+    width: 100%;
+    height: 0.2vh;
+    background-color: #000;
+    transform-origin: left;
+    transform: scaleX(0);
+    margin-left: 0.3vw;
+  }
+  #page-4 .img-section .img-divided {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #page-4 .img-section .img-divided .divided-upper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+  }
+  #page-4 .img-section .img-divided .divided-upper .part {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    gap: 0.5vw;
+  }
+  #page-4 .img-section .img-divided .divided-upper .part .image {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+  }
+  #page-4 .img-section .img-divided .divided-upper .part .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+  }
+  #page-4 .img-section .img-divided .divided-upper .part .image:hover img {
+    transform: scale(1.1);
+  }
+  #page-4 .img-section .img-divided .divided-upper .part .low-text h2 {
+    font-size: 1vw;
+    font-weight: 400;
+    padding-left: 0.3vw;
+  }
+  #page-4 .img-section .img-divided .divided-upper .part .low-text .animation {
+    display: inline-block;
+  }
+  #page-4
+    .img-section
+    .img-divided
+    .divided-upper
+    .part
+    .low-text
+    .animation
+    .underline {
+    width: 100%;
+    height: 0.2vh;
+    background-color: #000;
+    transform-origin: left;
+    transform: scaleX(0);
+    margin-left: 0.3vw;
+  }
+  #page-4 .img-section .img-divided .divided-lower {
+    width: 100%;
+    height: 50%;
   }
   #page-5 .up {
     flex-direction: column;
