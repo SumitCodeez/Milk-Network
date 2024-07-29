@@ -1492,6 +1492,26 @@ body {
   #page-4 .img-section .img-divided .divided-lower {
     display: none;
   }
+  #page-5 .box-inside {
+    background-position: center;
+    background-size: 280%;
+  }
+  #page-5 .box-inside .cursor {
+    display: none;
+  }
+  #page-5 .box-inside .para-text .head h1 {
+    font-size: 5vw;
+  }
+  #page-5 .box-inside .para-text p {
+    width: 50vw;
+    font-size: 5vw;
+  }
+  #page-5 .box-inside .para-text .bottle-img {
+    width: 18vw;
+    height: 18vw;
+    margin-right: 2vw;
+    padding: 1vw;
+  }
   #read-section .read .right .dash {
     width: 1.2vw;
     height: 0.5vh;
