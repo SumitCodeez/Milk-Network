@@ -408,7 +408,6 @@ locomotive();
 bottleImg();
 lineAnim();
 readAnim();
-imgCursor();
 imgGrow();
 navAnim();
 videoAnimation();
